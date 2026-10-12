@@ -1,0 +1,30 @@
+# Ambientes e Dependências
+.venv/
+env/
+__pycache__/
+*.pyc
+node_modules/
+
+# Arquivos de Mídia Pesados (Vídeos, Áudios Brutos, Renders)
+assets/raw/
+assets/rendered/
+temp/
+output/
+*.mp4
+*.mov
+*.wav
+*.mp3
+
+# Configurações e Segredos
+.env
+.env.local
+*.pem
+credentials.json
+
+# Sistema e IDEs
+.DS_Store
+.vscode/
+.idea/
+
+# Git Worktrees locais
+worktrees/
