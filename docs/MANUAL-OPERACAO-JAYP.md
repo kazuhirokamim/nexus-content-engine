@@ -1,6 +1,6 @@
 # 🕹️ Manual de Operação do Jayp — Rotina & Execução Diária
 
-Olá, **Jayp**! Este manual foi construído para você operar a máquina de conteúdo do **GTA 6** com máxima eficiência, sem perder tempo com edições manuais cansativas e sem precisar de reuniões diárias com o Kazu.
+Olá, **Jayp**! Este manual foi construído para você operar a plataforma **Nexus Content Engine** com máxima eficiência, sem perder tempo com edições manuais cansativas e sem precisar de reuniões diárias com o Kazu.
 
 A sua missão principal é **gerenciar a curadoria, revisar os vídeos automáticos e garantir a distribuição diária nas redes sociais**. A esteira de código faz 90% do trabalho pesado.
 
@@ -29,14 +29,14 @@ Dedique 5 minutos pela manhã ou à noite para checar:
 * **Canais Gringos no YouTube:** Veja os últimos títulos de canais como *LegacyKillaHD*, *Gamer Inquirer* ou *Badger Goodger*.
 
 ### 2. Disparando a Esteira de Vídeo
-Você não precisa saber programar. Basta abrir o terminal na pasta do projeto e rodar o comando:
+Você não precisa ser programador sênior para rodar. Basta abrir o terminal na pasta do projeto e rodar o comando:
 
 ```bash
-cd ~/Projetos/gta6-content-engine
+cd ~/Projetos/nexus-content-engine
 source .venv/bin/activate
 
-# Exemplo de geração de 1 vídeo
-python3 src/main.py --topic "Nova física de deformação de carros vazada do GTA 6"
+# Exemplo de geração de 1 vídeo sobre GTA 6
+python3 src/main.py --topic "Nova física de deformação de carros vazada do GTA 6" --niche gta6
 ```
 
 A esteira vai:
@@ -67,6 +67,6 @@ Poste o mesmo arquivo `.mp4` nas 3 redes:
 
 ## 🤝 Alinhamento Kazu & Jayp
 
-* **Kazu:** Responsável pela arquitetura do código, novas integrações de IA, melhoria na qualidade dos cortes e manutenção técnica.
+* **Kazu:** Responsável pela arquitetura do código da engine, novas integrações de IA, melhoria na qualidade dos cortes e manutenção técnica.
 * **Jayp:** Responsável pelo crescimento das redes, relacionamento com o público, testes de títulos/capas e consistência de postagem.
 * **Comunicação:** Caso a esteira apresente qualquer erro ou precise de novos clipes de gameplay, avise o Kazu com o log de erro no terminal.

@@ -1,14 +1,16 @@
-# 🌴 GTA 6 Content Engine — Máquina de Conteúdo & Perfis Dark
+# ⚡ Nexus Content Engine — Plataforma de Mídia Programática & Vídeos Verticais
 
-Sistema automatizado de curadoria, roteirização neural, renderização 9:16 e distribuição em escala de vídeos curtos sobre o universo de **Grand Theft Auto VI**.
+Sistema modular e automatizado de curadoria, roteirização neural, renderização 9:16 e distribuição em escala de vídeos curtos para YouTube Shorts, TikTok e Instagram Reels.
 
 ---
 
-## 🎯 1. Visão Geral do Projeto
+## 🎯 1. Visão Geral da Plataforma
 
-O **GTA 6 Content Engine** foi projetado para capturar a maior onda de atenção orgânica da história dos videogames. Em vez de produzir vídeos manualmente ou assinar ferramentas caras e engessadas (como ViceScale), este projeto utiliza uma esteira em código aberta, customizável e de baixíssimo custo.
+O **Nexus Content Engine** foi projetado para atuar como uma infraestrutura agnóstica de mídia vertical, capaz de transformar qualquer tema ou pauta em vídeos de alta retenção sem necessidade de gravação manual ou edição tradicional.
 
-* **Foco Estratégico:** **Via A (Crescimento de Ativos Próprios)** com monetização híbrida imediata (afiliados gamer + parcerias orgânicas) enquanto constrói audiência massiva até o lançamento do jogo.
+* **Nicho Flagship Inicial (Preset #1):** **GTA 6 (Grand Theft Auto VI)** — focado em capturar a maior onda de atenção e demanda reprimida da história dos games.
+* **Arquitetura Multi-Nicho:** O motor é 100% genérico. Novos nichos (tecnologia, curiosidades, finanças, cinema) podem ser ativados apenas apontando para novas pastas de B-Roll e templates de prompts.
+* **Foco Estratégico:** **Via A (Crescimento de Ativos Próprios)** com monetização híbrida imediata (afiliados gamer + patrocínios) enquanto constrói audiência proprietária.
 * **Governança Operacional:** Divisão clara entre infraestrutura de código (**Kazu**) e operação/distribuição diária de conteúdo (**Jayp**), mantendo o tempo do Kazu protegido para o *Pulsense* e *Call-in*.
 
 ---
@@ -16,18 +18,18 @@ O **GTA 6 Content Engine** foi projetado para capturar a maior onda de atenção
 ## 🏗️ 2. Arquitetura da Máquina de Conteúdo
 
 ```
-┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐
-│   1. CURADORIA  │       │  2. ROTEIRO IA  │       │  3. ÁUDIO & TTS │
-│  Reddit / X /   │ ────> │  Gemini Flash   │ ────> │ Edge-TTS neural │
-│  Fontes Oficiais│       │  Hooks de 3 seg │       │ ou ElevenLabs   │
-└─────────────────┘       └─────────────────┘       └─────────────────┘
-                                                             │
-                                                             ▼
-┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐
-│ 5. DISTRIBUIÇÃO │       │ 4. RENDERIZAÇÃO │       │ B-ROLL 4K GAME  │
-│ Shorts / Reels  │ <──── │ FFmpeg + Whisper│ <──── │ Clipes sem HUD  │
-│ TikTok diário   │       │ Legenda Karaoke │       │ Gameplay / RDR2 │
-└─────────────────┘       └─────────────────┘       └─────────────────┘
+┌──────────────────┐       ┌──────────────────┐       ┌──────────────────┐
+│   1. CURADORIA   │       │  2. ROTEIRO IA   │       │  3. ÁUDIO & TTS  │
+│  Reddit / X /    │ ────> │  Gemini Flash    │ ────> │ Edge-TTS neural  │
+│  Fontes Oficiais │       │  Hooks de 3 seg  │       │ ou ElevenLabs    │
+└──────────────────┘       └──────────────────┘       └──────────────────┘
+                                                               │
+                                                               ▼
+┌──────────────────┐       ┌──────────────────┐       ┌──────────────────┐
+│ 5. DISTRIBUIÇÃO  │       │ 4. RENDERIZAÇÃO  │       │ B-ROLL 4K GAME   │
+│ Shorts / Reels   │ <──── │ FFmpeg + Whisper │ <──── │ Clipes sem HUD   │
+│ TikTok diário    │       │ Legenda Karaoke  │       │ Gameplay / RDR2  │
+└──────────────────┘       └──────────────────┘       └──────────────────┘
 ```
 
 ---
@@ -36,7 +38,7 @@ O **GTA 6 Content Engine** foi projetado para capturar a maior onda de atenção
 
 | Frente | Responsável | Carga de Tempo | Missão Principal |
 | :--- | :--- | :--- | :--- |
-| **Infraestrutura & Código** | **Kazu** | ~1h a 2h / semana | Manter os scripts de automação, renderizador FFmpeg e integrações de IA funcionando. |
+| **Infraestrutura & Código** | **Kazu** | ~1h a 2h / semana | Manter a engine técnica, otimizar renderizadores, prompts e novas integrações. |
 | **Operação & Audiência** | **Jayp** | ~20 a 30 min / dia | Curadoria de pautas, disparo da esteira, revisão final de vídeo e postagem nos canais. |
 
 Consulte o [Manual de Operação do Jayp](docs/MANUAL-OPERACAO-JAYP.md) para o passo a passo detalhado da rotina diária.
@@ -45,7 +47,7 @@ Consulte o [Manual de Operação do Jayp](docs/MANUAL-OPERACAO-JAYP.md) para o p
 
 ## 📚 4. Documentação de Apoio
 
-* 📖 [Playbook de Prospecção & Crescimento da Via A](docs/PROSPECCAO-VIA-A-GTA6.md)
+* 📖 [Playbook de Prospecção & Crescimento da Via A (Nicho GTA 6)](docs/PROSPECCAO-VIA-A-GTA6.md)
 * 📋 [Manual de Operação Diária do Jayp](docs/MANUAL-OPERACAO-JAYP.md)
 * 🌿 [Guia Prático de Git Worktree para Trabalho Paralelo](docs/WORKTREE-GUIDE.md)
 
@@ -53,9 +55,9 @@ Consulte o [Manual de Operação do Jayp](docs/MANUAL-OPERACAO-JAYP.md) para o p
 
 ## 🚀 5. Primeiros Passos
 
-1. Clonar ou navegar até o diretório do projeto:
+1. Navegar até o diretório do projeto:
    ```bash
-   cd ~/Projetos/gta6-content-engine
+   cd ~/Projetos/nexus-content-engine
    ```
 2. Instalar dependências Python:
    ```bash
@@ -65,5 +67,9 @@ Consulte o [Manual de Operação do Jayp](docs/MANUAL-OPERACAO-JAYP.md) para o p
    ```
 3. Rodar a esteira de teste:
    ```bash
-   python3 src/main.py --topic "física de água do gta 6"
+   # Geração no nicho flagship (GTA 6)
+   python3 src/main.py --topic "física de água do gta 6" --niche gta6
+
+   # Geração em nicho genérico
+   python3 src/main.py --topic "modelos locais de inteligência artificial" --niche tech
    ```

@@ -1,6 +1,6 @@
-# 📡 Playbook de Prospecção & Crescimento da Via A (GTA 6)
+# 📡 Playbook de Prospecção & Crescimento da Via A (Nicho GTA 6)
 
-Guia estratégico para atração massiva de tráfego orgânico, retenção algorítmica e monetização híbrida nos perfis de conteúdo e canais dark voltados ao universo do **GTA 6**.
+Guia estratégico do módulo de GTA 6 dentro do **Nexus Content Engine** para atração massiva de tráfego orgânico, retenção algorítmica e monetização híbrida em perfis de conteúdo e canais dark.
 
 ---
 
@@ -8,8 +8,8 @@ Guia estratégico para atração massiva de tráfego orgânico, retenção algor
 
 A **Via A** consiste em construir canais e perfis digitais proprietários nas principais redes verticais (**YouTube Shorts, TikTok e Instagram Reels**), capturando a atenção reprimida do público gamer e direcionando essa atenção para fluxos de monetização previsíveis.
 
-### Por que focar na Via A agora?
-* O lançamento do jogo é o evento cultural mais esperado da década.
+### Por que o nicho de GTA 6 no Nexus?
+* O lançamento do jogo é o evento cultural mais esperado da década no entretenimento.
 * As buscas orgânicas não dependem de tráfego pago.
 * Perfis aquecidos com 50k a 100k seguidores são ativos digitais de alto valor de liquidez.
 
@@ -69,7 +69,7 @@ Não precisamos esperar 6 meses para monetizar via AdSense. Absorvemos o que há
 * **Comissão Média:** 3% a 7% sobre eletrônicos de R$ 3.000 a R$ 4.000 gera de **R$ 100 a R$ 250 de lucro por venda**.
 
 ### B. Da Esteira de IA (Escalabilidade Operacional)
-* Toda a renderização pesada fica delegada aos scripts em Python (Edge-TTS + Whisper + FFmpeg).
+* Toda a renderização pesada fica delegada à plataforma Nexus (Edge-TTS + Whisper + FFmpeg).
 * O Jayp não edita na mão; ele apenas revisa e agenda.
 
 ---

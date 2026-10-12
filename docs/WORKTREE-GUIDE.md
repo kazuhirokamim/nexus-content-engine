@@ -1,6 +1,6 @@
 # 🌿 Guia de Git Worktree — Desenvolvimento Paralelo sem Conflitos
 
-Este guia explica como utilizar o **Git Worktree** no projeto **gta6-content-engine** para que você (**Kazu**) e o **Jayp** possam trabalhar em diferentes frentes (código da esteira, testes de templates, curadoria de mídias) simultaneamente, em pastas separadas, compartilhando o mesmo repositório Git local.
+Este guia explica como utilizar o **Git Worktree** no projeto **nexus-content-engine** para que você (**Kazu**) e o **Jayp** possam trabalhar em diferentes frentes (código da esteira, testes de templates, curadoria de mídias) simultaneamente, em pastas separadas, compartilhando o mesmo repositório Git local.
 
 ---
 
@@ -13,7 +13,7 @@ Tradicionalmente, para trocar de branch no Git você usa `git checkout` ou `git 
 Com **Git Worktree**, o repositório principal gerencia múltiplos diretórios de trabalho independentes ao mesmo tempo. Cada pasta tem sua própria branch ativa!
 
 ```
-gta6-content-engine/            <-- Repositório Principal (branch: main)
+nexus-content-engine/           <-- Repositório Principal (branch: main)
 ├── .git/
 ├── docs/
 └── worktrees/
@@ -29,7 +29,7 @@ gta6-content-engine/            <-- Repositório Principal (branch: main)
 Para iniciar uma frente de trabalho isolada sem tocar na branch principal:
 
 ```bash
-cd ~/Projetos/gta6-content-engine
+cd ~/Projetos/nexus-content-engine
 
 # Cria uma pasta isolada dentro de worktrees/ vinculada à nova branch
 git worktree add worktrees/engine-automation -b feature/engine-automation
@@ -51,9 +51,9 @@ git worktree list
 
 A saída será parecida com:
 ```
-/Users/user/.../gta6-content-engine                   749a12c [main]
-/Users/user/.../gta6-content-engine/worktrees/engine  c4b2a19 [feature/engine-automation]
-/Users/user/.../gta6-content-engine/worktrees/jayp    89d2e11 [feature/jayp-content]
+/Users/user/.../nexus-content-engine                   749a12c [main]
+/Users/user/.../nexus-content-engine/worktrees/engine  c4b2a19 [feature/engine-automation]
+/Users/user/.../nexus-content-engine/worktrees/jayp    89d2e11 [feature/jayp-content]
 ```
 
 ### 4. Finalizar e Remover um Worktree

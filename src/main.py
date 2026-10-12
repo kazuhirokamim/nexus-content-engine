@@ -1,22 +1,22 @@
-"""GTA 6 Content Engine - CLI Entrypoint."""
+"""Nexus Content Engine - CLI Entrypoint."""
 
-import sys
 import argparse
 from script_generator import ScriptGenerator
 
 
 def main():
-    parser = argparse.ArgumentParser(description="GTA 6 Content Engine - Geração Automática")
+    parser = argparse.ArgumentParser(description="Nexus Content Engine - Geração Automática")
     parser.add_argument("--topic", type=str, required=True, help="Tópico ou tema do vídeo")
+    parser.add_argument("--niche", type=str, default="gta6", help="Nicho de atuação (default: gta6)")
     args = parser.parse_args()
 
     print("=" * 60)
-    print("🌴 GTA 6 Content Engine - Geração Automática de Vídeo")
-    print(f"🎯 Pauta: {args.topic}")
+    print("⚡ Nexus Content Engine - Geração Automática de Vídeo")
+    print(f"🎯 Nicho: {args.niche.upper()} | Pauta: {args.topic}")
     print("=" * 60)
 
     generator = ScriptGenerator()
-    script = generator.generate(args.topic)
+    script = generator.generate(topic=args.topic, niche=args.niche)
 
     print("\n📝 Roteiro Gerado:")
     print(f"👉 Gancho (0-3s): {script.hook}")
