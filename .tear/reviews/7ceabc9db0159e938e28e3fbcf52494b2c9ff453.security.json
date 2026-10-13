@@ -1,0 +1,21 @@
+{
+  "sha": "7ceabc9db0159e938e28e3fbcf52494b2c9ff453",
+  "branch": "feature/1-engine-setup",
+  "lane": "security",
+  "base": "main",
+  "pass": true,
+  "verdict": "PASS",
+  "critical": 0,
+  "major": 0,
+  "minor": 0,
+  "reviewer": "tear-security",
+  "reviewer_agent": "tear-security",
+  "author": "kazuhirokamim@gmail.com",
+  "notes": "Auditoria adversarial OWASP: Comandos ffmpeg e piper chamados estritamente via lista de argumentos em subprocess sem shell=True. Sanitização de caminhos de arquivos e nomes de presets previne directory traversal e injeção de comandos.",
+  "nonce": "4afe4625a0eccaed673e83ef281e3b81",
+  "signature": "ddf723099f9369f7052fb4310b553d5143a291b11d39241996fbefe770e1be73",
+  "repro": true,
+  "evidence": null,
+  "contextHash": "fefc39abdd32cc6a3484e25788169c70ef547d41783b235584d6e3bc5edbdc1f",
+  "reviewed_at": "2026-10-13T07:40:43.890Z"
+}

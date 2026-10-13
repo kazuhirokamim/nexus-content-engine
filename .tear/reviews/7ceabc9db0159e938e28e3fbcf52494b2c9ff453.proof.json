@@ -1,0 +1,29 @@
+{
+  "head_sha": "7ceabc9db0159e938e28e3fbcf52494b2c9ff453",
+  "base_sha": "c3bf748eb9e2bfb1c7d8deb395a108718f83e9de",
+  "proof_files": [
+    "tests/test_tts_engine.py",
+    "tests/test_video_assembler.py"
+  ],
+  "file_results": [
+    {
+      "file": "tests/test_tts_engine.py",
+      "red_exit": 1,
+      "red_ok": true,
+      "green_exit": 0,
+      "green_ok": true
+    },
+    {
+      "file": "tests/test_video_assembler.py",
+      "red_exit": 1,
+      "red_ok": true,
+      "green_exit": 0,
+      "green_ok": true
+    }
+  ],
+  "runner": ".venv/bin/python3 -m unittest discover tests",
+  "red_ok": true,
+  "green_ok": true,
+  "timestamp": "2026-10-13T07:40:42.329Z",
+  "valid": true
+}

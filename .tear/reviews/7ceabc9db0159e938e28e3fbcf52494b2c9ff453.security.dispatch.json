@@ -1,0 +1,12 @@
+{
+  "kind": "tear-review-dispatch",
+  "sha": "7ceabc9db0159e938e28e3fbcf52494b2c9ff453",
+  "lane": "security",
+  "reviewer_agent": "tear-security",
+  "author": "kazuhirokamim@gmail.com",
+  "pid": 36333,
+  "attempts": 1,
+  "dispatched_at": "2026-10-13T07:40:43.136Z",
+  "nonce": "4afe4625a0eccaed673e83ef281e3b81",
+  "signature": "ddf723099f9369f7052fb4310b553d5143a291b11d39241996fbefe770e1be73"
+}
