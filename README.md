@@ -4,6 +4,16 @@ Sistema modular e automatizado de curadoria, roteirização neural, renderizaç�
 
 ---
 
+## 🏛️ Governança Institucional & Padrão Tear
+
+O **Nexus Content Engine** segue os mesmos rigorosos princípios de engenharia de software, auditorias de 4 lanes, orçamentos assintóticos e documentação viva que regem os projetos **Pulsense**, **Doc2Fill** e **Call-in**:
+
+* **Documentação Canônica Viva:** Disponível em [`/documentation`](documentation/).
+* **Ponteiro do Cânone:** [GEMINI.md](GEMINI.md).
+* **Histórico de Mudanças:** [CHANGELOG.md](CHANGELOG.md).
+
+---
+
 ## 🎯 1. Visão Geral da Plataforma
 
 O **Nexus Content Engine** foi projetado para atuar como uma infraestrutura agnóstica de mídia vertical, capaz de transformar qualquer tema ou pauta em vídeos de alta retenção sem necessidade de gravação manual ou edição tradicional.
@@ -34,22 +44,25 @@ O **Nexus Content Engine** foi projetado para atuar como uma infraestrutura agn�
 
 ---
 
-## 👥 3. Divisão de Papéis (Kazu & Jayp)
+## 📚 3. Documentação Técnica & Registro Acadêmico
+
+Toda a fundamentação formal do projeto está versionada no repositório:
+
+* 📜 **[Tratado Acadêmico de Síntese Neural de Vídeo](documentation/TRATADO-ENGENHARIA-ESTEIRAS-VIDEO-NEURAL.md):** Fundamentação matemática da curva de retenção de dopamina, alinhamento fonético temporal via DTW e análise de complexidade.
+* 🏛️ **[Manual de Arquitetura de Software](documentation/ARCHITECTURE.md):** Arquitetura Hexagonal, orçamentos técnicos de latência, SLAs e separação Core vs. Presets.
+* 📋 **[Especificação Formal de Requisitos (EARS)](documentation/REQUIREMENTS.md):** Declarações formais de comportamento do sistema.
+* 📖 **[Playbook de Prospecção & Crescimento da Via A (Nicho GTA 6)](docs/PROSPECCAO-VIA-A-GTA6.md):** Estratégia de atração de tráfego, ganchos e afiliados gamer.
+* 🕹️ **[Manual de Operação Diária do Jayp](docs/MANUAL-OPERACAO-JAYP.md):** A rotina de 25 min/dia de operação.
+* 🌿 **[Guia Prático de Git Worktree](docs/WORKTREE-GUIDE.md):** Isolamento de branches para trabalho concorrente.
+
+---
+
+## 👥 4. Divisão de Papéis (Kazu & Jayp)
 
 | Frente | Responsável | Carga de Tempo | Missão Principal |
 | :--- | :--- | :--- | :--- |
 | **Infraestrutura & Código** | **Kazu** | ~1h a 2h / semana | Manter a engine técnica, otimizar renderizadores, prompts e novas integrações. |
 | **Operação & Audiência** | **Jayp** | ~20 a 30 min / dia | Curadoria de pautas, disparo da esteira, revisão final de vídeo e postagem nos canais. |
-
-Consulte o [Manual de Operação do Jayp](docs/MANUAL-OPERACAO-JAYP.md) para o passo a passo detalhado da rotina diária.
-
----
-
-## 📚 4. Documentação de Apoio
-
-* 📖 [Playbook de Prospecção & Crescimento da Via A (Nicho GTA 6)](docs/PROSPECCAO-VIA-A-GTA6.md)
-* 📋 [Manual de Operação Diária do Jayp](docs/MANUAL-OPERACAO-JAYP.md)
-* 🌿 [Guia Prático de Git Worktree para Trabalho Paralelo](docs/WORKTREE-GUIDE.md)
 
 ---
 
@@ -72,4 +85,8 @@ Consulte o [Manual de Operação do Jayp](docs/MANUAL-OPERACAO-JAYP.md) para o p
 
    # Geração em nicho genérico
    python3 src/main.py --topic "modelos locais de inteligência artificial" --niche tech
+   ```
+4. Executar os testes automatizados:
+   ```bash
+   python3 -m unittest discover tests
    ```
