@@ -1,6 +1,6 @@
-# Nexus Content Engine - Dependências
-edge-tts>=6.1.9
-whisper-timestamped>=1.15.0
+# Nexus Content Engine - Dependências Oficiais
+gTTS>=2.5.4
+imageio-ffmpeg>=0.6.0
 requests>=2.31.0
 google-genai>=0.1.1
 click>=8.1.7

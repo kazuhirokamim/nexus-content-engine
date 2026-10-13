@@ -1,0 +1,8 @@
+# Links de Afiliados Gamer - Preset GTA 6
+# Substitua pelos seus links reais de associado da Amazon / Mercado Livre
+
+PS5_SLIM=https://amzn.to/exemplo-ps5-slim
+XBOX_SERIES_X=https://amzn.to/exemplo-xbox-series-x
+SSD_NVME_2TB=https://amzn.to/exemplo-ssd-kingston-2tb
+HEADSET_GAMER=https://amzn.to/exemplo-headset-gamer
+CONTROLE_DUALSENSE=https://amzn.to/exemplo-dualsense

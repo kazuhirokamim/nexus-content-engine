@@ -1,0 +1,25 @@
+# Nexus Content Engine - Preset Flagship GTA 6
+
+niche: gta6
+name: "Grand Theft Auto VI"
+target_duration_seconds: 45
+
+hooks:
+  - "Atenção: um novo vazamento acaba de mudar tudo o que sabíamos sobre {topic} no GTA 6!"
+  - "A física de colisão do GTA 6 vai humilhar qualquer jogo já feito, olha o que descobriram sobre {topic}..."
+  - "A Rockstar colocou um detalhe insano em {topic} que 99% das pessoas não perceberam no trailer!"
+  - "Você sabia que a história por trás de {topic} no GTA 6 foi inspirada em um caso real da Flórida?"
+
+hashtags:
+  - "#gta6"
+  - "#gtavi"
+  - "#rockstargames"
+  - "#vicecity"
+  - "#playstation5"
+  - "#games"
+
+pinned_comment_template: |
+  🔥 Em qual plataforma você vai jogar GTA 6?
+  🔗 Garanta seu console ou upgrade de SSD nos melhores preços:
+  👉 PlayStation 5 Slim: https://amzn.to/exemplo-ps5
+  👉 SSD NVMe 2TB: https://amzn.to/exemplo-ssd
