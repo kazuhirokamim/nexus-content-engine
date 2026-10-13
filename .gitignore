@@ -4,6 +4,7 @@ env/
 __pycache__/
 *.pyc
 node_modules/
+models/
 
 # Arquivos de Mídia Pesados (Vídeos, Áudios Brutos, Renders)
 assets/raw/

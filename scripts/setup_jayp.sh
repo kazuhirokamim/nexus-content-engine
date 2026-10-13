@@ -36,12 +36,17 @@ source .venv/bin/activate
 pip install --upgrade pip --quiet
 pip install -r requirements.txt --quiet
 
-# 4. Verificação de Integridade do FFmpeg
+# 4. Download Idempotente do Modelo Neural Piper PT-BR
+mkdir -p models/piper output presets/gta6/b_roll presets/gta6/audio
+if [ ! -f "models/piper/pt_BR-faber-medium.onnx" ]; then
+    echo "🎙️ Baixando modelo de voz neural de alta velocidade (Piper PT-BR)..."
+    curl -s -L -o models/piper/pt_BR-faber-medium.onnx.json "https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_BR/faber/medium/pt_BR-faber-medium.onnx.json"
+    curl -s -L -o models/piper/pt_BR-faber-medium.onnx "https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_BR/faber/medium/pt_BR-faber-medium.onnx"
+fi
+
+# 5. Verificação de Integridade do FFmpeg
 echo "🔍 Validando executável FFmpeg embutido..."
 .venv/bin/python3 -c "import imageio_ffmpeg; print('   ✅ FFmpeg pronto:', imageio_ffmpeg.get_ffmpeg_exe())"
-
-# 5. Criar pastas operacionais caso não existam
-mkdir -p output presets/gta6/b_roll
 
 echo ""
 echo "============================================================"
