@@ -132,7 +132,7 @@ class VideoAssembler:
 
         if subtitles_path and os.path.exists(subtitles_path):
             escaped_srt = os.path.abspath(subtitles_path).replace("\\", "/").replace(":", "\\:")
-            # Estilo Karaokê ViceScale: Amarelo neon (&H0000FFFF), contorno preto forte (Outline=4), safe-zone 9:16
+            # Estilo Karaokê Nexus: Amarelo neon (&H0000FFFF), contorno preto forte (Outline=4), safe-zone 9:16
             style = "FontSize=24,PrimaryColour=&H0000FFFF,OutlineColour=&H00000000,BorderStyle=3,Outline=4,Alignment=2,MarginV=280"
             v_filters.append(f"subtitles={escaped_srt}:force_style='{style}'")
 
