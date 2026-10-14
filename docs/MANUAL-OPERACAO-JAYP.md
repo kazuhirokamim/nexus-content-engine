@@ -29,20 +29,28 @@ Dedique 5 minutos pela manhã ou à noite para checar:
 * **Canais Gringos no YouTube:** Veja os últimos títulos de canais como *LegacyKillaHD*, *Gamer Inquirer* ou *Badger Goodger*.
 
 ### 2. Disparando a Esteira de Vídeo
-Você não precisa ser programador sênior para rodar. Basta abrir o terminal na pasta do projeto e rodar o comando:
+Você não precisa ser programador para rodar. Basta abrir o terminal e executar o painel interativo:
 
 ```bash
 cd ~/Projetos/nexus-content-engine
 source .venv/bin/activate
 
-# Exemplo de geração de 1 vídeo sobre GTA 6
-python3 src/main.py --topic "Nova física de deformação de carros vazada do GTA 6" --niche gta6
+# Inicia o painel do operador
+python run_operator.py
 ```
 
-A esteira vai:
-1. Escrever o roteiro otimizado para retenção (com gancho nos primeiros 3s e loop no final).
-2. Gerar a narração neural limpa (sem voz robótica).
-3. Selecionar o B-Roll de gameplay 4K da biblioteca de mídias.
+O painel vai te dar 2 opções:
+* **[1] Gerar 1 Vídeo Único:** Digite a pauta e a esteira gera o vídeo completo (roteiro + voz neural + Whisper + B-Roll + legendas karaoke).
+* **[2] Multiplicar em Lote com NexusScale:** Digite a pauta e a quantidade desejada (ex: 3 variações) para criar ganchos e ângulos diferentes automaticamente para teste A/B.
+
+Ou se preferir via linha de comando direta:
+```bash
+# Vídeo único
+python run_operator.py --topic "Nova física de deformação de carros vazada do GTA 6"
+
+# Em lote com NexusScale (3 variações)
+python run_operator.py --scale --topic "Nova física de deformação de carros vazada do GTA 6" --count 3
+```
 4. Sincronizar as legendas dinâmicas estilo karaoke.
 5. Exportar o arquivo `.mp4` pronto na pasta `output/`.
 

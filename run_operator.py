@@ -106,21 +106,71 @@ def run_pipeline(topic: str, niche: str = "gta6") -> str:
     return final_video_path
 
 
+def run_scale_pipeline(topic: str, niche: str = "gta6", count: int = 3, output_dir: str = None):
+    """Executa a geração combinatória em lote com o NexusScale."""
+    from core.scale_matrix import ScaleMatrix
+    presets_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "presets"))
+    out_dir = output_dir or os.path.abspath(os.path.join(os.path.dirname(__file__), "output"))
+    os.makedirs(out_dir, exist_ok=True)
+
+    print("\n" + "=" * 65)
+    print("⚡ NEXUS CONTENT ENGINE — MOTOR COMBINATÓRIO NEXUSSCALE")
+    print(f"🎯 Nicho: {niche.upper()} | Pauta: {topic} | Variações: {count}")
+    print("=" * 65)
+
+    matrix = ScaleMatrix.from_preset(niche=niche, presets_dir=presets_dir, topic=topic)
+    print(f"\n📊 Universo de Combinações: {matrix.total_combinations} possíveis (|H|={len(matrix.hooks)} x |B|={len(matrix.broll_files)} x |C|={len(matrix.ctas)})")
+    
+    variations = matrix.generate_variations(count=count)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    manifest_path = os.path.join(out_dir, f"scale_manifest_{niche}_{timestamp}.json")
+    matrix.save_manifest(variations, manifest_path)
+
+    print(f"📋 Manifesto salvo em: {manifest_path}")
+    print("\n✨ Variações Geradas:")
+    for i, v in enumerate(variations, 1):
+        broll = os.path.basename(v.broll_file)
+        print(f"   [{i}/{len(variations)}] ID: {v.variation_id}")
+        print(f"        👉 Gancho: \"{v.hook}\"")
+        print(f"        🎮 B-Roll: {broll}")
+        print(f"        🔄 CTA: \"{v.cta}\"\n")
+
+    print("[OK] Variações preparadas com sucesso!")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Nexus Content Engine - Turnkey Operator CLI")
     parser.add_argument("--topic", type=str, help="Tema ou pauta quente do vídeo")
     parser.add_argument("--niche", type=str, default="gta6", help="Nicho de atuação (default: gta6)")
+    parser.add_argument("--scale", action="store_true", help="Gera variações combinatórias em massa com NexusScale")
+    parser.add_argument("--count", type=int, default=3, help="Quantidade de variações no modo scale (default: 3)")
     args = parser.parse_args()
 
     topic = args.topic
     if not topic:
-        print("⚡ Nexus Content Engine - Modo Interativo")
-        topic = input("👉 Digite a pauta ou notícia quente para o vídeo: ").strip()
+        print("\n" + "=" * 65)
+        print("⚡ NEXUS CONTENT ENGINE — PAINEL DO OPERADOR")
+        print("=" * 65)
+        print("Escolha o modo de operação:")
+        print("  [1] 🎬 Gerar 1 Vídeo Único Completo (Turnkey)")
+        print("  [2] 🚀 Multiplicar em Lote com NexusScale (1-to-N)")
+        choice = input("\n👉 Opção (1 ou 2) [Padrão: 1]: ").strip()
+
+        topic = input("\n👉 Digite a pauta ou notícia quente para o vídeo: ").strip()
         if not topic:
             print("Erro: A pauta não pode ser vazia.")
             sys.exit(1)
 
-    run_pipeline(topic=topic, niche=args.niche)
+        if choice == "2":
+            count_str = input("👉 Quantas variações deseja gerar? [Padrão: 3]: ").strip()
+            count = int(count_str) if count_str.isdigit() else 3
+            run_scale_pipeline(topic=topic, niche=args.niche, count=count)
+            return
+
+    if args.scale:
+        run_scale_pipeline(topic=topic, niche=args.niche, count=args.count)
+    else:
+        run_pipeline(topic=topic, niche=args.niche)
 
 
 if __name__ == "__main__":
