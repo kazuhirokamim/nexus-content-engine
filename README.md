@@ -49,6 +49,7 @@ O **Nexus Content Engine** foi projetado para atuar como uma infraestrutura agn�
 Toda a fundamentação formal do projeto está versionada no repositório:
 
 * 📜 **[Tratado Acadêmico de Síntese Neural de Vídeo](documentation/TRATADO-ENGENHARIA-ESTEIRAS-VIDEO-NEURAL.md):** Fundamentação matemática da curva de retenção de dopamina, alinhamento fonético temporal via DTW e análise de complexidade.
+* 🕵️‍♂️ **[Dossiê de Engenharia Reversa: ViceScale vs. Nexus](documentation/REVERSE-ENGINEERING-VICESCALE.md):** Dissecação da stack tecnológica, planos, rotas de API, Supabase e matriz de disrupção de 8 funcionalidades do concorrente.
 * 🏛️ **[Manual de Arquitetura de Software](documentation/ARCHITECTURE.md):** Arquitetura Hexagonal, orçamentos técnicos de latência, SLAs e separação Core vs. Presets.
 * 📋 **[Especificação Formal de Requisitos (EARS)](documentation/REQUIREMENTS.md):** Declarações formais de comportamento do sistema.
 * 📖 **[Playbook de Prospecção & Crescimento da Via A (Nicho GTA 6)](docs/PROSPECCAO-VIA-A-GTA6.md):** Estratégia de atração de tráfego, ganchos e afiliados gamer.
