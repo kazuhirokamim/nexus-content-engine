@@ -7,9 +7,18 @@ e este projeto adere estritamente ao [Semantic Versioning](https://semver.org/la
 
 ---
 
-## [Unreleased]
+## [0.3.0] - 2026-10-14
 
 ### Added
+- Motor combinatório cartesiano `NexusScale` (`src/core/scale_matrix.py`) com decomposição em ganchos $\times$ B-rolls $\times$ CTAs para testes A/B em massa.
+- Modo de execução em lote `--scale` no ponto de entrada CLI `src/main.py` com salvamento automático de manifesto de variações JSON.
+- Especificação técnica soberana e arquitetura multi-nicho em `documentation/BENCHMARK-COMPETITIVO-E-ESPECIFICACAO-NEXUS.md`.
+- Registro arquitetural ADR-003 e plano formal SDD 2.0 PLAN-003.
+- Suíte de testes unitários TDD cobrindo caminhos felizes, casos de borda e caminhos de erro (`tests/test_scale_matrix.py`), totalizando 20 testes 100% verdes.
+
+### Changed
+- Padronização soberana de todas as nomenclaturas da suíte funcional sob a marca proprietária Nexus (NexusScale, NexusScrap, NexusRepost, NexusTemplates, NexusEditor, NexusPack, NexusAcademy, NexusMCP).
+- Limpeza e abstração de qualquer dependência ou menção externa no código-fonte de produção.
 - Motor de síntese de voz neural local com Piper-TTS (`pt_BR-faber-medium.onnx`) com cadência acelerada (`length_scale: 0.85`) e cadeia de masterização broadcast (`acompressor`, `highpass`, `loudnorm`).
 - Alinhador acústico neural com Faster-Whisper (`tiny` int8) extraindo timestamps com precisão de milissegundos por palavra para legendas karaokê.
 - Suporte a clipes reais de gameplay em B-roll (`presets/gta6/b_roll/`) e mixagem com ducking de trilha synthwave de fundo (-22dB).
